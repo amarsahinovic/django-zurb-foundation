@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    {% block meta %}{% endblock %}
+    {% block base_title %}
+    <title>{% block title %}Foundation 4{% endblock %}</title>
+    {% endblock base_title %}
+
+    {# Base Foundation CSS #}
+    {% block foundation_css %}
+    <link rel="stylesheet" href="{% static 'foundation/css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'foundation/css/foundation.min.css' %}" />
+    {% endblock foundation_css %}  
+    
+    {# Custom CSS #}
+    {% block css %}{% endblock %}
+
+    {# Override if you need another version of modernizr #}
+    {% block modernizer %}
+    <script src="{% static 'foundation/js/vendor/custom.modernizr.js' %}"></script>
+    {% endblock modernizer %}
+
+    {# Custom head JS #}
+    {% block head_js %}{% endblock head_js %}
+</head>
+<body>
+    {% block base_body %}{% endblock base_body %}
+
+    {# Override to specify jQuery or Zepto manually instead of auto select #}
+    {% block foundation_jquery_zepto %}
+    <script>
+    document.write('<script src=' +
+        ('__proto__' in {} ? '{% static "foundation/js/vendor/zepto" %}' : '{% static "foundation/js/vendor/jquery" %}') +
+        '.js><\/script>')
+    </script>
+    {% endblock %}
+
+    {# Foundation JS #}
+    {% block foundation_js %}
+    <script src="{% static 'foundation/js/foundation.min.js' %}"></script>
+    {% endblock foundation_js %}
+
+    {# Custom JS #}
+    {% block body_js %}{% endblock body_js %}
+
+    {# Init Foundation #}
+    {% block foundation_js_init %}
+    <script>
+        $(document).foundation();
+    </script>
+    {% endblock foundation_js_init %}
+</body>
+</html>
