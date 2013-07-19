@@ -20,15 +20,16 @@
     {% block css %}{% endblock %}
 
     {# Override if you need another version of modernizr #}
-    {% block modernizer %}
+    {% block foundation_modernizer %}
     <script src="{% static 'foundation/js/vendor/custom.modernizr.js' %}"></script>
-    {% endblock modernizer %}
+    {% endblock foundation_modernizer %}
 
     {# Custom head JS #}
     {% block head_js %}{% endblock head_js %}
 </head>
-<body>
-    {% block base_body %}{% endblock base_body %}
+<body {% block body_attr %}{% endblock body_attr %}>
+    {# Main content goes here #}
+    {% block foundation_body %}{% endblock foundation_body %}
 
     {# Override to specify jQuery or Zepto manually instead of auto select #}
     {% block foundation_jquery_zepto %}

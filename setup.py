@@ -1,4 +1,5 @@
 #/usr/bin/env python
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 import os
 
@@ -7,7 +8,7 @@ SOURCE_DIR = os.path.join(ROOT_DIR)
 
 setup(
     name="django-zurb-foundation",
-    version="4.2.1",
+    version="4.3.0",
     description="Django Zurb Foundation package.",
     author="Amar Šahinović",
     author_email="amar@sahinovic.com",
