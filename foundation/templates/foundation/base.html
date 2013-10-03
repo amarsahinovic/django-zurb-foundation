@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    {% block meta %}{% endblock %}
+    {% block meta %}{% endblock meta %}
     {% block base_title %}
-    <title>{% block title %}Foundation 4{% endblock %}</title>
+    <title>{% block title %}Foundation 4{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
@@ -17,7 +17,7 @@
     {% endblock foundation_css %}  
     
     {# Custom CSS #}
-    {% block css %}{% endblock %}
+    {% block css %}{% endblock css %}
 
     {# Override if you need another version of modernizr #}
     {% block foundation_modernizer %}
@@ -38,7 +38,7 @@
         ('__proto__' in {} ? '{% static "foundation/js/vendor/zepto" %}' : '{% static "foundation/js/vendor/jquery" %}') +
         '.js><\/script>')
     </script>
-    {% endblock %}
+    {% endblock foundation_jquery_zepto %}
 
     {# Foundation JS #}
     {% block foundation_js %}

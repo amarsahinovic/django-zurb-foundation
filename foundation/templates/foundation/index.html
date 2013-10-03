@@ -1,10 +1,12 @@
 {% extends "foundation/base.html" %}
+{% load foundation_tags %}
+
 {% block foundation_body %}
 
 	<div class="row">
 		<div class="large-12 columns">
 			<h2>Welcome to Foundation</h2>
-			<p>This is version 4.3.0.</p>
+			<p>This is version 4.3.2.</p>
 			<hr />
 		</div>
 	</div>
@@ -82,3 +84,10 @@
 	</div>
 
 {% endblock foundation_body %}
+
+{% block body_js %}
+
+{# Example usage of js include tag #}
+{% foundation_include "abide" %}
+    
+{% endblock body_js %}
