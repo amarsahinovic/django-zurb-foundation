@@ -1,19 +1,19 @@
 {% load static %}
-<!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+{% load foundation_tags %}
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block meta %}{% endblock meta %}
     {% block base_title %}
-    <title>{% block title %}Foundation 4{% endblock title %}</title>
+    <title>{% block title %}Foundation 5{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
     {% block foundation_css %}
-    <link rel="stylesheet" href="{% static 'foundation/css/normalize.css' %}" />
-    <link rel="stylesheet" href="{% static 'foundation/css/foundation.min.css' %}" />
+    {% foundation_css "normalize" %}
+    {% foundation_css "foundation.min" %}
     {% endblock foundation_css %}  
     
     {# Custom CSS #}
@@ -21,7 +21,7 @@
 
     {# Override if you need another version of modernizr #}
     {% block foundation_modernizer %}
-    <script src="{% static 'foundation/js/vendor/custom.modernizr.js' %}"></script>
+    {% foundation_vendor "custom.modernizr" %}
     {% endblock foundation_modernizer %}
 
     {# Custom head JS #}
@@ -29,20 +29,16 @@
 </head>
 <body {% block body_attr %}{% endblock body_attr %}>
     {# Main content goes here #}
-    {% block foundation_body %}{% endblock foundation_body %}
+    {% block base_body %}{% endblock base_body %}
 
-    {# Override to specify jQuery or Zepto manually instead of auto select #}
-    {% block foundation_jquery_zepto %}
-    <script>
-    document.write('<script src=' +
-        ('__proto__' in {} ? '{% static "foundation/js/vendor/zepto" %}' : '{% static "foundation/js/vendor/jquery" %}') +
-        '.js><\/script>')
-    </script>
-    {% endblock foundation_jquery_zepto %}
+    {# Override if you need another version of jQuery #}
+    {% block foundation_jquery %}
+    {% foundation_vendor "jquery" %}
+    {% endblock foundation_jquery %}
 
     {# Foundation JS #}
     {% block foundation_js %}
-    <script src="{% static 'foundation/js/foundation.min.js' %}"></script>
+    {% foundation_js "foundation.min" %}
     {% endblock foundation_js %}
 
     {# Custom JS #}
