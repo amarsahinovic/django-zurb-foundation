@@ -22,8 +22,9 @@ For example, to include `abide` library use:
     {% foundation_js 'abide' %}
 
 Depending on your static url, it will replace the previous tag with something like `<script src="/static/foundation/js/foundation/foundation.abide.js"></script>`.
-
 Same works for Foundation css and vendor files, but in that case use the `foundation_css` or `foundation_vendor` tag the same way.
+
+Note that if you call `foundation_js` without any parameters, it will include `foundation.min.js` file.
 
 Foundation icons
 ================
