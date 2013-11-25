@@ -12,7 +12,7 @@ Usage
 - If you want to use the provided base template, extend from `foundation/base.html`. If you want to write one from scratch, see the example template.
 - If you want to test if foundation works, include `foundation.urls` in your urls.py and visit the path. You should see the Foundation test page.
 
-Including Zurb Foundation js/css/vendor files
+Including Foundation js/css/vendor files
 =============================================
 
 To include specific Foundation js files, you can use `foundation_js` tag. 
