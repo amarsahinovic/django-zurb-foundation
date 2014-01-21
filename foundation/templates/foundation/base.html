@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block meta %}{% endblock meta %}
     {% block base_title %}
-    <title>{% block title %}Foundation 5{% endblock title %}</title>
+    <title>{% block title %}Foundation 5.0.3{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
@@ -21,7 +21,7 @@
 
     {# Override if you need another version of modernizr #}
     {% block foundation_modernizer %}
-    {% foundation_vendor "custom.modernizr" %}
+    {% foundation_vendor "modernizr" %}
     {% endblock foundation_modernizer %}
 
     {# Custom head JS #}

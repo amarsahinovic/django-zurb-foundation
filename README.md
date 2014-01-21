@@ -1,4 +1,4 @@
-django-zurb-foundation 5.0.2
+django-zurb-foundation 5.0.3
 ============================
 
 Django Zurb Foundation 5 package.
@@ -40,6 +40,11 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 
 Changes
 =======
+
+Version 5.0.3
+
+- Moved `js/modernizr` to `js/vendor/modernizr` and removed `js/vendor/custom.modernizr`
+- Moved `js/jquery` to `js/vendor/jquery`
 
 Version 5.0.2
 
