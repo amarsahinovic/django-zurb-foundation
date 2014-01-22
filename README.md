@@ -54,3 +54,7 @@ Version 5.0.2
 - Renamed `foundation_include` to `foundation_js`
 - Added `foundation_vendor` and `foundation_css` tags
 - Used the tags from this package in the base template
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/amarsahinovic/django-zurb-foundation/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
