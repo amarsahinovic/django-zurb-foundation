@@ -1,4 +1,4 @@
-django-zurb-foundation 5.0.3
+django-zurb-foundation 5.1.1
 ============================
 
 Django Zurb Foundation 5 package.
@@ -40,6 +40,9 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 
 Changes
 =======
+
+Version 5.1.1
+- Updated foundation to 5.1.1
 
 Version 5.0.3
 
