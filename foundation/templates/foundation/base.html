@@ -1,5 +1,4 @@
 {% load static %}
-{% load foundation_tags %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -7,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block meta %}{% endblock meta %}
     {% block base_title %}
-    <title>{% block title %}Foundation 5.0.3{% endblock title %}</title>
+    <title>{% block title %}Foundation 5.3.0{% endblock title %}</title>
     {% endblock base_title %}
 
     {# Base Foundation CSS #}
     {% block foundation_css %}
-    {% foundation_css "normalize" %}
-    {% foundation_css "foundation.min" %}
+    <link href="{% static "foundation/css/normalize.css" %}" rel="stylesheet"/>
+    <link href="{% static "foundation/css/foundation.min.css" %}" rel="stylesheet"/>
     {% endblock foundation_css %}  
     
     {# Custom CSS #}
@@ -21,7 +20,7 @@
 
     {# Override if you need another version of modernizr #}
     {% block foundation_modernizer %}
-    {% foundation_vendor "modernizr" %}
+    <script src="{% static "foundation/js/vendor/modernizr.js" %}"></script>
     {% endblock foundation_modernizer %}
 
     {# Custom head JS #}
@@ -33,12 +32,12 @@
 
     {# Override if you need another version of jQuery #}
     {% block foundation_jquery %}
-    {% foundation_vendor "jquery" %}
+    <script src="{% static "foundation/js/vendor/jquery.js" %}"></script>
     {% endblock foundation_jquery %}
 
     {# Foundation JS #}
     {% block foundation_js %}
-    {% foundation_js %}
+    <script src="{% static "foundation/js/foundation.min.js" %}"></script>
     {% endblock foundation_js %}
 
     {# Custom JS #}

@@ -1,4 +1,4 @@
-django-zurb-foundation 5.1.1
+django-zurb-foundation 5.3.0
 ============================
 
 Django Zurb Foundation 5 package.
@@ -15,6 +15,8 @@ Usage
 Including Foundation js/css/vendor files
 =============================================
 
+#### Note: these tags are deprecated in favor of including files directly with Django `static` tag. They will be removed in version 6.x. Templates have been updated to use the new method.
+
 To include specific Foundation js files, you can use `foundation_js` tag. 
 
 For example, to include `abide` library use:
@@ -29,6 +31,8 @@ Note that if you call `foundation_js` without any parameters, it will include `f
 Foundation icons
 ================
 
+#### Note: this tag is deprecated in favor of including files directly with Django `static` tag. It will be removed in version 6.x. Templates have been updated to use the new method.
+
 The latest Foundation icons set is now included in this package.
 The icons are not enabled by default. To enable them use something like this in your template:
 
@@ -40,6 +44,11 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 
 Changes
 =======
+
+Version 5.3.0
+- Updated foundation to 5.3.0
+- Deprecated foundation tags (they will be removed in version 6.x)
+- Updated templates not to use tags
 
 Version 5.1.1
 - Updated foundation to 5.1.1
