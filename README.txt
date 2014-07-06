@@ -45,7 +45,7 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 Changes
 =======
 
-Version 5.3.0a
+Version 5.3.0.1
 - Added scss files
 
 Version 5.3.0
