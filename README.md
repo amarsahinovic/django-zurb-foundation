@@ -45,6 +45,9 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 Changes
 =======
 
+Version 5.3.0a
+- Added scss files
+
 Version 5.3.0
 - Updated foundation to 5.3.0
 - Deprecated foundation tags (they will be removed in version 6.x)

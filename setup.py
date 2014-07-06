@@ -8,7 +8,7 @@ SOURCE_DIR = os.path.join(ROOT_DIR)
 
 setup(
     name="django-zurb-foundation",
-    version="5.3.0",
+    version="5.3.0a",
     description="Django Zurb Foundation package.",
     author="Amar Šahinović",
     author_email="amar@sahinovic.com",
