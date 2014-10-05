@@ -1,4 +1,4 @@
-django-zurb-foundation 5.3.0
+django-zurb-foundation 5.4.5
 ============================
 
 Django Zurb Foundation 5 package.
