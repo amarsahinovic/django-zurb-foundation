@@ -4,7 +4,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '5.3.0',
+    version : '5.4.5',
 
     settings: {
       start: 0,
@@ -40,10 +40,15 @@
           if (!!self.cache.active) {
             e.preventDefault();
             if ($.data(self.cache.active[0], 'settings').vertical) {
-              self.calculate_position(self.cache.active, e.pageY || 
-                                                         e.originalEvent.clientY || 
-                                                         e.originalEvent.touches[0].clientY || 
-                                                         e.currentPoint.y);
+              var scroll_offset = 0;
+              if (!e.pageY) {
+                scroll_offset = window.scrollY;
+              }
+              self.calculate_position(self.cache.active, (e.pageY || 
+                                                          e.originalEvent.clientY || 
+                                                          e.originalEvent.touches[0].clientY || 
+                                                          e.currentPoint.y) 
+                                                          + scroll_offset);
             } else {
               self.calculate_position(self.cache.active, e.pageX || 
                                                          e.originalEvent.clientX || 
@@ -123,20 +128,28 @@
 
       $handle.parent().children('input[type=hidden]').val(value);
 
-      if (settings.input_id != '') {
-        $(settings.display_selector).each(function(){
-          if (this.hasOwnProperty('value')) {
-            $(this).val(value);
-          } else {
-            $(this).text(value);
-          }
+      if (!$handle[0].hasAttribute('aria-valuemin')) {
+        $handle.attr({
+          'aria-valuemin': settings.start,
+          'aria-valuemax': settings.end,
         });
       }
+      $handle.attr('aria-valuenow', value);
+
+      // if (settings.input_id != '') {
+      //   $(settings.display_selector).each(function(){
+      //     if (this.hasOwnProperty('value')) {
+      //       $(this).val(value);
+      //     } else {
+      //       $(this).text(value);
+      //     }
+      //   });
+      // }
 
     },
 
     normalized_percentage : function(val, start, end) {
-      return (val - start)/(end - start);
+      return Math.min(1, (val - start)/(end - start));
     },
 
     normalized_value : function(val, start, end, step) {
