@@ -45,6 +45,9 @@ If you have added `foundation.urls` to your urls.py visit `icons/` on that path 
 Changes
 =======
 
+Version 5.4.7
+- Updated foundation to 5.4.7
+
 Version 5.4.5
 - Updated foundation to 5.4.5
 
