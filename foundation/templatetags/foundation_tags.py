@@ -7,7 +7,7 @@ register = template.Library()
 def foundation_js(js_name=None):
     js_path = "foundation/js/foundation/foundation.{0}.js".format(js_name)
     if js_name is None:
-       js_path = "foundation/js/foundation.min.js".format(js_name)
+       js_path = "foundation/js/foundation.min.js"
 
     return '<script src="{0}"></script>'.format(static(js_path))
 
