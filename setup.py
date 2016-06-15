@@ -8,11 +8,11 @@ SOURCE_DIR = os.path.join(ROOT_DIR)
 
 setup(
     name="django-zurb-foundation",
-    version="5.5.0",
+    version="6.2.3",
     description="Django Zurb Foundation package.",
     author="Amar Šahinović",
     author_email="amar@sahinovic.com",
-    url="https://github.com/amarsahinovic/django-zurb-foundation",
+    url="https://github.com/codywd/django-zurb-foundation",
     license='BSD License', 
     packages=find_packages(),
     include_package_data=True,

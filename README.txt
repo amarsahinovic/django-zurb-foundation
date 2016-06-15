@@ -1,7 +1,7 @@
-django-zurb-foundation 5.5.0
+django-zurb-foundation 6.2.3
 ============================
 
-Django Zurb Foundation 5 package.
+Django Zurb Foundation 6 package.
 
 Version of this package is equal to the version of Zurb Foundation it provides.
 
@@ -12,38 +12,10 @@ Usage
 - If you want to use the provided base template, extend from `foundation/base.html`. If you want to write one from scratch, see the example template.
 - If you want to test if foundation works, include `foundation.urls` in your urls.py and visit the path. You should see the Foundation test page.
 
-Including Foundation js/css/vendor files
-=============================================
-
-#### Note: these tags are deprecated in favor of including files directly with Django `static` tag. They will be removed in version 6.x. Templates have been updated to use the new method.
-
-To include specific Foundation js files, you can use `foundation_js` tag. 
-
-For example, to include `abide` library use:
-
-    {% foundation_js 'abide' %}
-
-Depending on your static url, it will replace the previous tag with something like `<script src="/static/foundation/js/foundation/foundation.abide.js"></script>`.
-Same works for Foundation css and vendor files, but in that case use the `foundation_css` or `foundation_vendor` tag the same way.
-
-Note that if you call `foundation_js` without any parameters, it will include `foundation.min.js` file.
-
-Foundation icons
-================
-
-#### Note: this tag is deprecated in favor of including files directly with Django `static` tag. It will be removed in version 6.x. Templates have been updated to use the new method.
-
-The latest Foundation icons set is now included in this package.
-The icons are not enabled by default. To enable them use something like this in your template:
-
-    {% block css %}
-        {% foundation_css 'foundation-icons' %}
-    {% endblock css %}
-
-If you have added `foundation.urls` to your urls.py visit `icons/` on that path to see them.
-
 Changes
 =======
+Version 6.2.3
+- Updated foundation to 6.2.3 (codywd)
 
 Version 5.5.0
 - Updated foundation to 5.5.0
